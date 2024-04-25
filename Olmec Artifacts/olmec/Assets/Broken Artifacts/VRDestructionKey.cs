@@ -6,6 +6,7 @@ public class VRDestructionKey : MonoBehaviour
 {
 
     public GameObject breakVersion;
+    public GameObject key;
     public float bForce = 1f;
     protected Rigidbody rb;
     private int active = 0;
@@ -26,6 +27,7 @@ public class VRDestructionKey : MonoBehaviour
             Instantiate(breakVersion, transform.position, transform.rotation);
             rb.AddExplosionForce(10f, Vector3.zero, 0f);
             Destroy(gameObject);
+            Instantiate(key, transform.position, transform.rotation);
             
 
 
